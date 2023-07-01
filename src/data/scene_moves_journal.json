@@ -1,0 +1,749 @@
+{
+    "component": "gamescreen",
+    "css": {
+      "display": "grid",
+      "gridTemplateColumns": "12% 78% 10%",
+      "gridTemplateRows": "90% 10%",
+      "background": "url('./arctic-background.png') no-repeat",
+      "backgroundSize": "cover"
+    },
+    "text": "",
+    "children": [
+      {
+        "component": "cardscontainer",
+        "css": {
+          "display": "flex",
+          "flexDirection": "column",
+          "gap": "1em",
+          "gridColumn": "2",
+          "gridRow": "1 / 2",
+          "backgroundColor": "rgba(21, 58, 95, 0.8)",
+          "paddingTop": "1em",
+          "paddingLeft": "1em",
+          "paddingRight": "1em",
+          "overflow": "auto"
+        },
+        "children" : [
+            {
+                "component":"h1",
+                "text": "Журнал ходов",
+                "css" : {
+                    "color": "#fff",
+                    "fontSize": "1.25rem",
+                    "fontWeight": "600",
+                    "textAlign": "center"
+                }
+
+            },
+            {
+            "component": "div",
+            "css" : {
+                "display":"grid",
+                "gridTemplateColumns":" 1fr 1fr",
+                "columnGap": ".5em",
+                "rowGap": ".2em",
+                "backgroundColor": "rgba(21, 58, 95, 0.7)",
+                "padding": ".5em"
+            },         
+            "children": [
+                {
+                  "component": "card",
+                  "id": "3",
+                  "text": "Но на айсберге пингвины были как в крепости, большинство хищников не могли до них добраться, кроме того, айсберг служил надежным убежищем от зимних ледяных штормов благодаря своим размерам и наличию",
+                  "onclick" : "request",
+                  "css": {
+                    "height": "150px",
+                    "padding": ".5em 1em",
+                    "backgroundColor": "rgba(18,116,169, 0.4)",
+                    "color": "#fff",
+                    "fontWeight": "bold",
+                    "fontSize": "1.15rem",
+                    "marginBottom": "0.2em"
+                  }           
+                },
+                {
+                  "component": "card",
+                  "id": "4",
+                  "text": "Антарктика - это огромный мир из воды, льда и снега, настолько огромный, что никто из его обитателей, кроме, пожалуй, китов, не представляет егоАнтарктика - это огромный мир из воды, льда и снега, настолько огромный, что никто из его обитателей, кроме, пожалуй, китов, не представляет его",
+                  "css": {
+                    "height": "150px",
+                    "padding": ".5em 1em",
+                    "backgroundColor": "rgba(18,116,169, 0.4)",
+                    "color": "#fff",
+                    "fontWeight": "bold",
+                    "fontSize": "1.15rem",
+                    "overflow": "scroll"
+                  }           
+                },
+                {
+                    "component":"sidebar",
+                    "css": {
+                        "display": "flex",
+                        "listStyleType": "none",
+                        "justifyContent": "space-evenly",
+                        "color": "#fff",
+                        "fontSize": "1em",
+                        "fontWeight": "600",
+                        "gridColumn": "span 2",
+                        "margin": "0px 5px"
+                    },
+                    "children": [{
+                        "component":"div",
+                        "css": {
+                            "display": "flex",
+                            "flexDirection": "column"
+                        },
+                        "children": [
+                            {
+                                "component": "div",
+                                "css": {
+                                    "display": "flex",
+                                    "justifyContent": "center"
+                                },
+                                "children": [
+                                    {
+                                        "component":"score",
+                                        "text": "-1",
+                                        "css": {
+                                         "fontSize": "2.25rem",
+                                         "fontWeight": "600"
+                                        }                                
+                                    }
+                                ]                                                      
+                            },
+                                    {
+                                        "component": "label",
+                                        "text": "знания"
+                                    }                        
+                        ]
+                    },
+                    {
+                        "component":"div",
+                        "css": {
+                            "display": "flex",
+                            "flexDirection": "column"
+                        },
+                        "children": [
+                            {
+                                "component": "div",
+                                "css": {
+                                    "display": "flex",
+                                    "justifyContent": "center"
+                                },
+                                "children": [
+                                    {
+                                        "component":"score",
+                                        "text": "15",
+                                        "css": {
+                                         "fontSize": "2.25rem",
+                                         "fontWeight": "600"
+                                        }                                
+                                    }
+                                ]                                                      
+                            },
+                                    {
+                                        "component": "label",
+                                        "text": "доверие"
+                                    }                        
+                        ]
+                    },
+                    {
+                        "component":"div",
+                        "css": {
+                            "display": "flex",
+                            "flexDirection": "column"
+                        },
+                        "children": [
+                            {
+                                "component": "div",
+                                "css": {
+                                    "display": "flex",
+                                    "justifyContent": "center"
+                                },
+                                "children": [
+                                    {
+                                        "component":"score",
+                                        "text": "7",
+                                        "css": {
+                                         "fontSize": "2.25rem",
+                                         "fontWeight": "600"
+                                        }                                
+                                    },
+                                    {
+                                        "component":"score",
+                                        "text": "-2",
+                                        "css": {
+                                            "fontSize": "1.25rem",
+                                            "fontWeight": "800",
+                                            "padding": "0 0.25em"
+                                           }     
+                                    }
+                                ]                                                      
+                            },
+                                    {
+                                        "component": "label",
+                                        "text": "энергия"
+                                    }                        
+                        ]
+                    },
+                    {
+                        "component":"div",
+                        "css": {
+                            "display": "flex",
+                            "flexDirection": "column"
+                        },
+                        "children": [
+                            {
+                                "component": "div",
+                                "css": {
+                                    "display": "flex",
+                                    "justifyContent": "center"
+
+                                },
+                                "children": [
+                                    {
+                                        "component":"score",
+                                        "text": "-8",
+                                        "css": {
+                                         "fontSize": "2.25rem",
+                                         "fontWeight": "600"
+                                        }                                
+                                    }
+                                ]                                                      
+                            },
+                                    {
+                                        "component": "label",
+                                        "text": "контроль"
+                                    }                        
+                        ]
+                    },
+                    {
+                        "component":"div",
+                        "css": {
+                            "display": "flex",
+                            "flexDirection": "column"
+                        },
+                        "children": [
+                            {
+                                "component": "div",
+                                "css": {
+                                    "display": "flex",
+                                    "justifyContent": "center"
+                                },
+                                "children": [
+                                    {
+                                        "component":"score",
+                                        "text": "-5",
+                                        "css": {
+                                         "fontSize": "2.25rem",
+                                         "fontWeight": "600"
+                                        }                                
+                                    }
+                                ]                                                      
+                            },
+                                    {
+                                        "component": "label",
+                                        "text": "статус"
+                                    }                        
+                        ]
+                    },
+                    {
+                        "component":"div",
+                        "css": {
+                            "display": "flex",
+                            "flexDirection": "column"
+                        },
+                        "children": [
+                            {
+                                "component": "div",
+                                "css": {
+                                    "display": "flex",
+                                    "justifyContent": "center"
+                                },
+                                "children": [
+                                    {
+                                        "component":"score",
+                                        "text": "10",
+                                        "css": {
+                                         "fontSize": "2.25rem",
+                                         "fontWeight": "600"
+                                        }                                
+                                    },
+                                    {
+                                        "component":"score",
+                                        "text": "-2",
+                                        "css": {
+                                            "fontSize": "1.25rem",
+                                            "fontWeight": "800",
+                                            "padding": "0 0.25em"
+                                           }     
+                                    }
+                                ]                                                      
+                            },
+                                    {
+                                        "component": "label",
+                                        "text": "контакт"
+                                    }                        
+                        ]
+                    },
+                    {
+                        "component":"div",
+                        "css": {
+                            "display": "flex",
+                            "flexDirection": "column"
+                        },
+                        "children": [
+                            {
+                                "component": "div",
+                                "css": {
+                                    "display": "flex",
+                                    "justifyContent": "center"
+                                },
+                                "children": [
+                                    {
+                                        "component":"score",
+                                        "text": "8",
+                                        "css": {
+                                         "fontSize": "2.25rem",
+                                         "fontWeight": "600"
+                                        }                                
+                                    }
+                                ]                                                      
+                            },
+                                    {
+                                        "component": "label",
+                                        "text": "конструктив"
+                                    }                        
+                        ]
+                    },
+                    {
+                        "component":"div",
+                        "css": {
+                            "display": "flex",
+                            "flexDirection": "column"
+                        },
+                        "children": [
+                            {
+                                "component": "div",
+                                "css": {
+                                    "display": "flex",
+                                    "justifyContent": "center"
+                                },
+                                "children": [
+                                    {
+                                        "component":"score",
+                                        "text": "2",
+                                        "css": {
+                                         "fontSize": "2.25rem",
+                                         "fontWeight": "600"
+                                        }                                
+                                    }
+                                ]                                                      
+                            },
+                                    {
+                                        "component": "label",
+                                        "text": "гибкость"
+                                    }                        
+                        ]
+                    }
+                    ]
+                 
+                }
+              ]
+        },
+        {
+            "component": "div",
+            "css" : {
+                "display":"grid",
+                "gridTemplateColumns":" 1fr 1fr",
+                "columnGap": ".5em",
+                "rowGap": ".2em",
+                "backgroundColor": "rgba(21, 58, 95, 0.7)",
+                "padding": ".5em"
+            },         
+            "children": [
+                {
+                  "component": "card",
+                  "id": "3",
+                  "text": "Антарктика - это огромный мир из воды, льда и снега, настолько огромный, что никто из его обитателей, кроме, пожалуй, китов, не представляет его",
+                  "onclick" : "request",
+                  "css": {
+                    "height": "150px",
+                    "padding": ".5em 1em",
+                    "backgroundColor": "rgba(18,116,169, 0.4)",
+                    "color": "#fff",
+                    "fontWeight": "bold",
+                    "fontSize": "1.15rem",
+                    "marginBottom": "0.2em"
+                  }           
+                },
+                {
+                  "component": "card",
+                  "id": "4",
+                  "text": "Антарктика - это огромный мир из воды, льда и снега, настолько огромный, что никто из его обитателей, кроме, пожалуй, китов, не представляет его. Антарктика - это огромный мир из воды, льда и снега, настолько огромный, что никто из его обитателей, кроме, пожалуй, китов, не представляет его",
+                  "css": {
+                    "height": "150px",
+                    "padding": ".5em 1em",
+                    "backgroundColor": "rgba(18,116,169, 0.4)",
+                    "color": "#fff",
+                    "fontWeight": "bold",
+                    "fontSize": "1.15rem",
+                    "overflow": "scroll"
+                  }           
+                },
+                {
+                    "component":"sidebar",
+                    "css": {
+                        "display": "flex",
+                        "listStyleType": "none",
+                        "justifyContent": "space-evenly",
+                        "color": "#fff",
+                        "fontSize": "1em",
+                        "fontWeight": "600",
+                        "gridColumn": "span 2",
+                        "margin": "0px 5px"
+                    },
+                    "children": [{
+                        "component":"div",
+                        "css": {
+                            "display": "flex",
+                            "flexDirection": "column"
+                        },
+                        "children": [
+                            {
+                                "component": "div",
+                                "css": {
+                                    "display": "flex",
+                                    "justifyContent": "center"
+                                },
+                                "children": [
+                                    {
+                                        "component":"score",
+                                        "text": "-1",
+                                        "css": {
+                                         "fontSize": "2.25rem",
+                                         "fontWeight": "600"
+                                        }                                
+                                    }
+                                ]                                                      
+                            },
+                                    {
+                                        "component": "label",
+                                        "text": "знания"
+                                    }                        
+                        ]
+                    },
+                    {
+                        "component":"div",
+                        "css": {
+                            "display": "flex",
+                            "flexDirection": "column"
+                        },
+                        "children": [
+                            {
+                                "component": "div",
+                                "css": {
+                                    "display": "flex",
+                                    "justifyContent": "center"
+                                },
+                                "children": [
+                                    {
+                                        "component":"score",
+                                        "text": "14",
+                                        "css": {
+                                         "fontSize": "2.25rem",
+                                         "fontWeight": "600"
+                                        }                                
+                                    }
+                                ]                                                      
+                            },
+                                    {
+                                        "component": "label",
+                                        "text": "доверие"
+                                    }                        
+                        ]
+                    },
+                    {
+                        "component":"div",
+                        "css": {
+                            "display": "flex",
+                            "flexDirection": "column"
+                        },
+                        "children": [
+                            {
+                                "component": "div",
+                                "css": {
+                                    "display": "flex",
+                                    "justifyContent": "center"
+                                },
+                                "children": [
+                                    {
+                                        "component":"score",
+                                        "text": "9",
+                                        "css": {
+                                         "fontSize": "2.25rem",
+                                         "fontWeight": "600"
+                                        }                                
+                                    }
+                                ]                                                      
+                            },
+                                    {
+                                        "component": "label",
+                                        "text": "энергия"
+                                    }                        
+                        ]
+                    },
+                    {
+                        "component":"div",
+                        "css": {
+                            "display": "flex",
+                            "flexDirection": "column"
+                        },
+                        "children": [
+                            {
+                                "component": "div",
+                                "css": {
+                                    "display": "flex",
+                                    "justifyContent": "center"
+
+                                },
+                                "children": [
+                                    {
+                                        "component":"score",
+                                        "text": "-7",
+                                        "css": {
+                                         "fontSize": "2.25rem",
+                                         "fontWeight": "600"
+                                        }                                
+                                    }
+                                ]                                                      
+                            },
+                                    {
+                                        "component": "label",
+                                        "text": "контроль"
+                                    }                        
+                        ]
+                    },
+                    {
+                        "component":"div",
+                        "css": {
+                            "display": "flex",
+                            "flexDirection": "column"
+                        },
+                        "children": [
+                            {
+                                "component": "div",
+                                "css": {
+                                    "display": "flex",
+                                    "justifyContent": "center"
+                                },
+                                "children": [
+                                    {
+                                        "component":"score",
+                                        "text": "-5",
+                                        "css": {
+                                         "fontSize": "2.25rem",
+                                         "fontWeight": "600"
+                                        }                                
+                                    }
+                                ]                                                      
+                            },
+                                    {
+                                        "component": "label",
+                                        "text": "статус"
+                                    }                        
+                        ]
+                    },
+                    {
+                        "component":"div",
+                        "css": {
+                            "display": "flex",
+                            "flexDirection": "column"
+                        },
+                        "children": [
+                            {
+                                "component": "div",
+                                "css": {
+                                    "display": "flex",
+                                    "justifyContent": "center"
+                                },
+                                "children": [
+                                    {
+                                        "component":"score",
+                                        "text": "10",
+                                        "css": {
+                                         "fontSize": "2.25rem",
+                                         "fontWeight": "600"
+                                        }                                
+                                    },
+                                    {
+                                        "component":"score",
+                                        "text": "-8",
+                                        "css": {
+                                            "fontSize": "1.25rem",
+                                            "fontWeight": "800",
+                                            "padding": "0 0.25em"
+                                           }     
+                                    }
+                                ]                                                      
+                            },
+                                    {
+                                        "component": "label",
+                                        "text": "контакт"
+                                    }                        
+                        ]
+                    },
+                    {
+                        "component":"div",
+                        "css": {
+                            "display": "flex",
+                            "flexDirection": "column"
+                        },
+                        "children": [
+                            {
+                                "component": "div",
+                                "css": {
+                                    "display": "flex",
+                                    "justifyContent": "center"
+                                },
+                                "children": [
+                                    {
+                                        "component":"score",
+                                        "text": "9",
+                                        "css": {
+                                         "fontSize": "2.25rem",
+                                         "fontWeight": "600"
+                                        }                                
+                                    }
+                                ]                                                      
+                            },
+                                    {
+                                        "component": "label",
+                                        "text": "конструктив"
+                                    }                        
+                        ]
+                    },
+                    {
+                        "component":"div",
+                        "css": {
+                            "display": "flex",
+                            "flexDirection": "column"
+                        },
+                        "children": [
+                            {
+                                "component": "div",
+                                "css": {
+                                    "display": "flex",
+                                    "justifyContent": "center"
+                                },
+                                "children": [
+                                    {
+                                        "component":"score",
+                                        "text": "2",
+                                        "css": {
+                                         "fontSize": "2.25rem",
+                                         "fontWeight": "600"
+                                        }                                
+                                    }
+                                ]                                                      
+                            },
+                                    {
+                                        "component": "label",
+                                        "text": "гибкость"
+                                    }                        
+                        ]
+                    }
+                    ]
+                 
+                }
+              ]
+        }
+        ]
+      },
+      {
+        "component": "footer",
+        "id": "39",
+        "css": {
+          "display": "flex",
+          "justifyContent": "space-between",
+          "padding": ".5em .5em",
+          "alignItems": "center",
+          "backgroundColor":"rgba(21, 58, 95, 0.8)",
+          "gridRow": "2",
+          "gridColumn": "2"      
+        },
+        "children": [
+            {
+                "component": "div",
+                "css": {
+                    "display": "flex",
+                    "gap": "2em",
+                    "marginLeft": "10em"
+                },
+                "children": [
+                    {
+                        "component": "label",
+                        "id": "40",
+                        "text": "журнал ходов",
+                        "css": {
+                          "gridColumn": "2",
+                          "height": "1.5em",
+                          "width": "8em",
+                          "textAlign": "center",
+                          "color": "rgba(94,166,195, 0.8)",
+                          "fontWeight": "bold",
+                          "background": "url('./images/gurnal-hodov.png') no-repeat"
+                        }
+                      },
+                      {
+                        "component": "label",
+                        "id": "41",
+                        "text": "подсказка",
+                        "css": {
+                          "gridColumn": "3",
+                          "height": "1.5em",
+                          "width": "6em",
+                          "textAlign": "center",
+                          "color": "rgba(94,166,195, 0.8)",
+                          "fontWeight": "bold",
+                          "background": "url('./images/podskazka.png') no-repeat"
+                        }
+                      }
+                ]
+            },
+            {
+            "component": "div",
+            "css": {
+                "display": "flex",
+                "gap": "1.5em"
+            },
+            "children": [
+                {
+                    "component": "btn",
+                    "id": "42",
+                    "onClick": "handleClick_2",
+                    "css": {
+                      "gridColumn": "5",
+                      "background": "url('./images/navigacia/left_3.png') no-repeat",
+                      "height": "35px",
+                      "width": "35px"
+                    }
+                  },
+                  {
+                    "component": "btn",
+                    "id": "43",
+                    "id_tst": "forward",
+                    "onClick": "handleClick",
+                    "css": {
+                      "gridColumn": "6",
+                      "background": "url('./images/navigacia/right_3.png') no-repeat",
+                      "height": "35px",
+                      "width": "35px"
+                    }
+                  }
+                ]
+            }        
+        ]
+      }
+    ]
+  }

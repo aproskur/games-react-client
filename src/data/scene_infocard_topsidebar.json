@@ -1,0 +1,475 @@
+{
+    "component": "gamescreen",
+    "id": "1",
+    "css": {
+      "display": "grid",
+      "gridTemplateColumns": "20% 70% 10%",
+      "gridTemplateRows": "15% 77% 8%",
+      "background": "url('./arctic-background.png') no-repeat",
+      "backgroundSize": "cover"
+    },
+    "text": "",
+    "children": [
+      {
+        "component": "cardscontainer",
+        "id": "2",
+        "css": {
+          "gap": "1em",
+          "gridColumn": "2",
+          "gridRow": "2",
+          "backgroundColor": "rgba(21, 58, 95, 0.8)",
+          "padding": "10px",
+          "overflow": "auto"
+        },
+        "children": [
+            {
+              "component": "card",
+              "css": {
+                "height": "100%",
+                "width": "100%",
+                "padding": "0.25em 1em",
+                "marginBottom": "0.5em",
+                "color": "#fff",
+                "fontWeight": "bold",
+                "fontSize": "1.15rem"
+              },
+              "children": [{
+                "component": "div",
+                "css": {
+                  "height": "100%",
+                  "width": "100%",
+                  "padding": "1em 1em",
+                  "background": "url('./images/voting_pinguin.jpg') no-repeat",
+                  "backgroundSize": "contain",
+                  "marginBottom": "1em"
+                }
+              },
+              {
+                "component": "div",
+                "text": "Антарктика - это огромный мир из воды, льда и снега, настолько огромный, что никто из его обитателей, кроме, пожалуй, китов, не представляет его размеров. Кроме гигантского материка, полностью покрытого льдом, в антарктике есть множество айсбергов, больших и маленьких, неспешно дрейфующих в океане. На одном из таких айсбергов и разворачиваются события, в которых вам предстоит принять участие.",
+                "css": {
+                  "width": "100%",
+                  "height": "100%"
+                }
+              }
+              ]
+    
+            }
+          ]
+
+      },
+      {
+        "component": "div",
+        "id": "9",
+        "css": {
+        "gridColumn": "2",
+        "gridRow": "1",
+        "backgroundColor": "rgba(21, 58, 95, 0.8)"
+        }
+      },
+      {
+        "component": "sidebar",
+        "id": "10",
+        "css" : {
+          "gridColumn": "1 / 3",
+          "gridRow": "1",
+          "alignItems": "start",
+          "display": "flex",
+          "width": "90%",
+          "justifyContent": "space-between",
+          "listStyleType": "none",
+          "color": "#fff",
+          "fontSize": "2rem",
+          "fontWeight": "bold",
+          "marginLeft": "100px"
+        },
+        "children": [
+          {
+            "component": "score",
+            "id": "11",
+            "css": {
+              "color": "#fff"
+            },
+            "children" : [
+              {
+                "component": "label",
+                "id": "12",
+                "text": "45",
+                "css": {
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "background": "url('./top-sidebar/days-top.png') no-repeat",
+                  "backgroundSize": "cover",
+                  "fontSize": "2rem",
+                  "textAlign": "center"
+                }
+              },
+              {
+                "component": "label",
+                "id": "13",
+                "text": "Осталось дней",
+                "css": {
+                  "fontSize": "1rem",
+                  "width": "80px",
+                  "textAlign": "center",
+                  "lineHeight": "1",
+                  "marginTop": "0.5em"
+                }
+              }
+            ]
+          },
+          {
+            "component": "score",
+            "id": "14",
+            "css": {
+              "color": "#fff"
+            },
+            "children" : [
+              {
+                "component": "label",
+                "id": "15",
+                "text": "-1",
+                "css": {
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "background": "url('./top-sidebar/znaniya.png') no-repeat",
+                  "backgroundSize": "cover",
+                  "color": "rgba(21, 58, 95)",
+                  "fontSize": "2rem",
+                  "textAlign": "center"
+                }
+              },
+              {
+                "component": "label",
+                "id": "17",
+                "text": "знания",
+                "css": {
+                  "fontSize": "1rem",
+                  "textAlign": "center",
+                  "lineHeight": "1",
+                  "marginTop": "0.5em"
+                }
+              }
+            ]
+          },
+          {
+            "component": "score",
+            "id": "18",
+            "css": {
+              "color": "#fff"
+            },
+            "children" : [
+              {
+                "component": "label",
+                "id": "19",
+                "text": "-15",
+                "css": {
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "background": "url('./top-sidebar/doverie.png') no-repeat",
+                  "backgroundSize": "cover",
+                  "color": "rgba(21, 58, 95)",
+                  "fontSize": "2rem",
+                  "textAlign": "center"
+                }
+              },
+              {
+                "component": "label",
+                "id": "20",
+                "text": "доверие",
+                "css": {
+                  "fontSize": "1rem",
+                  "textAlign": "center",
+                  "lineHeight": "1",
+                  "marginTop": "0.5em"
+                }
+              }
+            ]
+          },
+          {
+            "component": "score",
+            "id": "21",
+            "css": {
+              "color": "#fff"
+            },
+            "children" : [
+              {
+                "component": "label",
+                "id": "22",
+                "text": "7",
+                "css": {
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "background": "url('./top-sidebar/energia.png') no-repeat",
+                  "backgroundSize": "cover",
+                  "color": "rgba(21, 58, 95)",
+                  "fontSize": "2rem",
+                  "textAlign": "center"
+                }
+              },
+              {
+                "component": "label",
+                "id": "23",
+                "text": "энергия",
+                "css": {
+                  "fontSize": "1rem",
+                  "textAlign": "center",
+                  "lineHeight": "1",
+                  "marginTop": "0.5em"
+                }
+              }
+            ]
+          },
+          {
+            "component": "score",
+            "id": "24",
+            "css": {
+              "color": "#fff"
+            },
+            "children" : [
+              {
+                "component": "label",
+                "id": "25",
+                "text": "-8",
+                "css": {
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "background": "url('./top-sidebar/kontrol.png') no-repeat",
+                  "backgroundSize": "cover",
+                  "color": "rgba(21, 58, 95)",
+                  "fontSize": "2rem",
+                  "textAlign": "center"
+                }
+              },
+              {
+                "component": "label",
+                "id": "26",
+                "text": "контроль",
+                "css": {
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "fontSize": "1rem",
+                  "textAlign": "center",
+                  "lineHeight": "1",
+                  "marginTop": "0.5em"
+                }
+              }
+            ]
+          },
+          {
+            "component": "score",
+            "id": "27",
+            "css": {
+              "color": "#fff"
+            },
+            "children" : [
+              {
+                "component": "label",
+                "id": "28",
+                "text": "-5",
+                "css": {
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "background": "url('./top-sidebar/status.png') no-repeat",
+                  "backgroundSize": "cover",
+                  "color": "rgba(21, 58, 95)",
+                  "fontSize": "2rem",
+                  "textAlign": "center"
+                }
+              },
+              {
+                "component": "label",
+                "id": "29",
+                "text": "статус",
+                "css": {
+                  "fontSize": "1rem",
+                  "textAlign": "center",
+                  "lineHeight": "1",
+                  "marginTop": "0.5em"
+                }
+              }
+            ]
+          },
+          {
+            "component": "score",
+            "id": "30",
+            "css": {
+              "color": "#fff"
+            },
+            "children" : [
+              {
+                "component": "label",
+                "id": "31",
+                "text": "10",
+                "css": {
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "background": "url('./top-sidebar/kontakt.png') no-repeat",
+                  "backgroundSize": "cover",
+                  "color": "rgba(21, 58, 95)",
+                  "textAlign": "center"
+                }
+              },
+              {
+                "component": "label",
+                "id": "32",
+                "text": "контакт",
+                "css": {
+                  "fontSize": "1rem",
+                  "textAlign": "center",
+                  "lineHeight": "1",
+                  "marginTop": "0.5em"
+                }
+              }
+            ]
+          },
+          {
+            "component": "score",
+            "id": "33",
+            "css": {
+              "color": "#fff"
+            },
+            "children" : [
+              {
+                "component": "label",
+                "id": "34",
+                "text": "8",
+                "css": {
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "background": "url('./top-sidebar/konstruktiv.png') no-repeat",
+                  "backgroundSize": "cover",
+                  "color": "rgba(21, 58, 95)",
+                  "fontSize": "2rem",
+                  "textAlign": "center"
+                }
+              },
+              {
+                "component": "label",
+                "id": "35",
+                "text": "конструктив",
+                "css": {
+                  "fontSize": "1rem",
+                  "textAlign": "center",
+                  "lineHeight": "1",
+                  "marginTop": "0.5em"
+                }
+              }
+            ]
+          },
+          {
+            "component": "score",
+            "id": "36",
+            "css": {
+              "color": "#fff"
+            },
+            "children" : [
+              {
+                "component": "label",
+                "id": "37",
+                "text": "2",
+                "css": {
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "background": "url('./top-sidebar/gibkost.png') no-repeat",
+                  "backgroundSize": "cover",
+                  "color": "rgba(21, 58, 95)",
+                  "fontSize": "2rem",
+                  "textAlign": "center"
+                }
+              },
+              {
+                "component": "label",
+                "id": "38",
+                "text": "гибкость",
+                "css": {
+                  "fontSize": "1rem",
+                  "textAlign": "center",
+                  "lineHeight": "1",
+                  "marginTop": "0.5em"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "footer",
+        "id": "39",
+        "text": "",
+        "css": {
+          "display": "grid",
+          "gridTemplateColumns": "1fr 2fr 1fr 60% 1fr 1fr" ,
+          "gap": ".5em",
+          "padding": ".5em .5em",
+          "alignItems": "center",
+          "backgroundColor":"rgba(21, 58, 95, 0.8)",
+          "gridRow": "3",
+          "gridColumn": "2 / 2"      
+        },
+        "children": [
+          {
+            "component": "label",
+            "id": "40",
+            "text": "журнал ходов",
+            "css": {
+              "gridColumn": "2",
+              "height": "1.5em",
+              "width": "8em",
+              "textAlign": "center",
+              "color": "rgba(94,166,195, 0.8)",
+              "fontWeight": "bold",
+              "background": "url('./images/gurnal-hodov.png') no-repeat"
+            }
+          },
+          {
+            "component": "label",
+            "id": "41",
+            "text": "подсказка",
+            "css": {
+              "gridColumn": "3",
+              "height": "1.5em",
+              "width": "6em",
+              "textAlign": "center",
+              "color": "rgba(94,166,195, 0.8)",
+              "fontWeight": "bold",
+              "background": "url('./images/podskazka.png') no-repeat"
+            }
+          },
+          {
+            "component": "btn",
+            "id": "42",
+            "onClick": "handleClick_2",
+            "css": {
+              "gridColumn": "5",
+              "background": "url('./images/navigacia/left_3.png') no-repeat",
+              "height": "35px",
+              "width": "35px"
+            }
+          },
+          {
+            "component": "btn",
+            "id": "43",
+            "id_tst": "forward",
+            "onClick": "handleClick",
+            "css": {
+              "gridColumn": "6",
+              "background": "url('./images/navigacia/right_3.png') no-repeat",
+              "height": "35px",
+              "width": "35px"
+            }
+          }
+        ]
+      }
+    ]
+  }
