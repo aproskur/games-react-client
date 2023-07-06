@@ -7,7 +7,6 @@
       "background": "url('./arctic-background.png') no-repeat",
       "backgroundSize": "cover"
     },
-    "text": "",
     "children": [
       {
         "component": "cardscontainer",
@@ -17,100 +16,87 @@
           "gap": "1em",
           "gridColumn": "2",
           "gridRow": "1 / 2",
-          "backgroundColor": "rgba(21, 58, 95, 0.8)",
-          "paddingTop": "1em",
+          "backgroundColor": "rgba(34, 46, 80, 0.5)",
+          "paddingTop": "2em",
           "paddingLeft": "1em",
           "paddingRight": "1em",
           "overflow": "auto"
         },
         "children": [
-            {
-              "component": "card",
-              "id": "3",
-              "text": "Антарктика - это огромный мир из воды, льда и снега, настолько огромный, что никто из его обитателей, кроме, пожалуй, китов, не представляет его",
-              "onclick" : "request",
-              "css": {
-                "height": "300px",
-                "width": "300px",
-                "padding": "1.25em 1em",
-                "backgroundColor": "rgba(18,116,169, 0.4)",
-                "color": "#fff",
-                "fontWeight": "bold",
-                "fontSize": "1.15rem",
-                "marginBottom": "0.2em"
-              }           
-            },
-            {
-              "component": "card",
-              "id": "4",
-              "text": "Антарктика - это огромный мир из воды, льда и снега, настолько огромный, что никто из его обитателей, кроме, пожалуй, китов, не представляет его",
-              "css": {
-                "height": "300px",
-                "width": "300px",
-                "padding": "1.25em 1em",
-                "backgroundColor": "rgba(18,116,169, 0.4)",
-                "color": "#fff",
-                "fontWeight": "bold",
-                "fontSize": "1.15rem"
-              }           
-            },
-            {
-              "component": "card",
-              "id": "5",
-              "text": "Антарктика - это огромный мир из воды, льда и снега, настолько огромный, что никто из его обитателей, кроме, пожалуй, китов, не представляет его",
-              "css": {
-                "height": "300px",
-                "width": "300px",
-                "padding": "1.25em 1em",
-                "backgroundColor": "rgba(18,116,169, 0.4)",
-                "color": "#fff",
-                "fontWeight": "bold",
-                "fontSize": "1.15rem"
-              }           
-            },
-            {
-              "component": "card",
-              "id": "6",
-              "text": "Антарктика - это огромный мир из воды, льда и снега, настолько огромный, что никто из его обитателей, кроме, пожалуй, китов, не представляет его",
-              "css": {
-                "height": "300px",
-                "width": "300px",
-                "padding": "1.25em 1em",
-                "backgroundColor": "rgba(18,116,169, 0.4)",
-                "color": "#fff",
-                "fontWeight": "bold",
-                "fontSize": "1.15rem"
-              }           
-            },
-            {
-              "component": "card",
-              "id": "7",
-              "text": "Антарктика - это огромный мир из воды, льда и снега, настолько огромный, что никто из его обитателей, кроме, пожалуй, китов, не представляет его",
-              "css": {
-                "height": "300px",
-                "width": "300px",
-                "padding": "1.25em 1em",
-                "backgroundColor": "rgba(18,116,169, 0.4)",
-                "color": "#fff",
-                "fontWeight": "bold",
-                "fontSize": "1.15rem"
-              }           
-            },
-            {
-              "component": "card",
-              "id": "8",
-              "text": "Антарктика - это огромный мир из воды, льда и снега, настолько огромный, что никто из его обитателей, кроме, пожалуй, китов, не представляет его",
-              "css": {
-                "height": "300px",
-                "width": "300px",
-                "padding": "1.25em 1em",
-                "backgroundColor": "rgba(18,116,169, 0.4)",
-                "color": "#fff",
-                "fontWeight": "bold",
-                "fontSize": "1.15rem"
-              }           
-            }
-          ]
+          {
+            "component": "card",
+            "text": "Антарктика - это огромный мир из воды, льда и снега, настолько огромный, что никто из его обитателей, кроме, пожалуй, китов, не представляет его размеров. Кроме гигантского материка,",
+            "css": {
+              "width": "300px",
+              "padding": "1.25em 1em",
+              "backgroundColor": "rgba(162, 217, 247, 0.5)",
+              "color": "#fff",
+              "fontWeight": "bold",
+              "fontSize": "1.15rem"
+            }           
+          },
+          {
+            "component": "card",
+            "text": "Антарктика - это огромный мир из воды, льда и снега, настолько огромный, что никто из его обитателей, кроме, пожалуй, китов, не представляет его размеров. Кроме гигантского материка,",
+            "css": {
+              "width": "300px",
+              "padding": "1.25em 1em",
+              "backgroundColor": "rgba(162, 217, 247, 0.5)",
+              "color": "#fff",
+              "fontWeight": "bold",
+              "fontSize": "1.15rem"
+            }           
+          },
+                    {
+            "component": "card",
+            "text": "Антарктика - это огромный мир из воды, льда и снега, настолько огромный, что никто из его обитателей, кроме, пожалуй, китов, не представляет его размеров. Кроме гигантского материка,",
+            "css": {
+              "width": "300px",
+              "padding": "1.25em 1em",
+              "backgroundColor": "rgba(162, 217, 247, 0.5)",
+              "color": "#fff",
+              "fontWeight": "bold",
+              "fontSize": "1.15rem"
+            }           
+          },
+          {
+            "component": "card",
+            "text": "Антарктика - это огромный мир из воды, льда и снега, настолько огромный, что никто из его обитателей, кроме, пожалуй, китов, не представляет его размеров. Кроме гигантского материка,",
+            "css": {
+              "width": "300px",
+              "padding": "1.25em 1em",
+              "backgroundColor": "rgba(162, 217, 247, 0.5)",
+              "color": "#fff",
+              "fontWeight": "bold",
+              "fontSize": "1.15rem"
+            }           
+          },
+          {
+            "component": "card",
+            "text": "Антарктика - это огромный мир из воды, льда и снега, настолько огромный, что никто из его обитателей, кроме, пожалуй, китов, не представляет его размеров. Кроме гигантского материка,",
+            "css": {
+              "width": "300px",
+              "padding": "1.25em 1em",
+              "backgroundColor": "rgba(162, 217, 247, 0.5)",
+              "color": "#fff",
+              "fontWeight": "bold",
+              "fontSize": "1.15rem"
+            }           
+          },
+          {
+            "component": "card",
+            "text": "Антарктика - это огромный мир из воды, льда и снега, настолько огромный, что никто из его обитателей, кроме, пожалуй, китов, не представляет его размеров. Кроме гигантского материка,",
+            "css": {
+              "width": "300px",
+              "padding": "1.25em 1em",
+              "backgroundColor": "rgba(162, 217, 247, 0.5)",
+              "color": "#fff",
+              "fontWeight": "bold",
+              "fontSize": "1.15rem"
+            }           
+          }
+          
+        ]
       },
       {
         "component": "sidebar",
@@ -163,7 +149,7 @@
           {
             "component": "score",
             "css": {
-              "color": "rgba(21, 58, 95)",
+              "color": "rgb(28, 95, 145)",
               "display": "flex",
               "gap": "0.75em",
               "justifyContent": "center",
@@ -172,7 +158,8 @@
               "background": "url('./images/left-sidebar/znania.png') no-repeat",
               "backgroundSize": "cover",
               "width": "70%",
-              "height": "50px"
+              "height": "50px",
+              "marginTop": "1em"
             },
             "children": [
               {
@@ -194,7 +181,7 @@
           {
             "component": "score",
             "css": {
-              "color": "rgba(21, 58, 95)",
+              "color": "rgb(28, 95, 145)",
               "display": "flex",
               "gap": "0.75em",
               "justifyContent": "center",
@@ -225,7 +212,7 @@
           {
             "component": "score",
             "css": {
-              "color": "rgba(21, 58, 95)",
+              "color": "rgb(28, 95, 145)",
               "display": "flex",
               "gap": "0.75em",
               "justifyContent": "center",
@@ -256,7 +243,7 @@
           {
             "component": "score",
             "css": {
-              "color": "rgba(21, 58, 95)",
+              "color": "rgb(28, 95, 145)",
               "display": "flex",
               "gap": "0.75em",
               "justifyContent": "center",
@@ -287,7 +274,7 @@
           {
             "component": "score",
             "css": {
-              "color": "rgba(21, 58, 95)",
+              "color": "rgb(28, 95, 145)",
               "display": "flex",
               "gap": "0.75em",
               "justifyContent": "center",
@@ -318,7 +305,7 @@
           {
             "component": "score",
             "css": {
-              "color": "rgba(21, 58, 95)",
+              "color": "rgb(28, 95, 145)",
               "display": "flex",
               "gap": "0.75em",
               "justifyContent": "center",
@@ -349,7 +336,7 @@
           {
             "component": "score",
             "css": {
-              "color": "rgba(21, 58, 95)",
+              "color": "rgb(28, 95, 145)",
               "display": "flex",
               "gap": "0.75em",
               "justifyContent": "center",
@@ -389,7 +376,7 @@
           "gap": ".5em",
           "padding": ".5em .5em",
           "alignItems": "center",
-          "backgroundColor":"rgba(21, 58, 95, 0.8)",
+          "backgroundColor":"rgba(34, 46, 80, 0.5)",
           "gridRow": "2",
           "gridColumn": "2"      
         },
@@ -403,7 +390,7 @@
               "height": "1.5em",
               "width": "8em",
               "textAlign": "center",
-              "color": "rgba(94,166,195, 0.8)",
+              "color": "rgb(95, 166, 197)",
               "fontWeight": "bold",
               "background": "url('./images/gurnal-hodov.png') no-repeat"
             }
@@ -417,7 +404,7 @@
               "height": "1.5em",
               "width": "6em",
               "textAlign": "center",
-              "color": "rgba(94,166,195, 0.8)",
+              "color": "rgb(95, 166, 197)",
               "fontWeight": "bold",
               "background": "url('./images/podskazka.png') no-repeat"
             }

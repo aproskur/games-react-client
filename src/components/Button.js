@@ -1,13 +1,12 @@
 import React from 'react'
 import { useContext, memo } from 'react';
-import { SceneContext } from '../SceneContext.js';
 import { UpdateContext } from '../UpdateContext.js';
 
 const Button = memo( function Button({children, ...props}) {
 
 
 
-
+//test
     function handleClick() {
         alert("Следующая страница");
     }
@@ -16,6 +15,7 @@ const Button = memo( function Button({children, ...props}) {
         alert("Предыдущая страница");
     }
 
+    //test
     const f1 = handleClick;
     const f2 = handleClick_2;
 
@@ -37,7 +37,7 @@ const Button = memo( function Button({children, ...props}) {
 
     
 
-    //const text_tst = useContext(SceneContext);
+
     const id = useContext(UpdateContext)
     return (
         <div style = {props.style} id={props.id} onClick = {getFunction(func)}>

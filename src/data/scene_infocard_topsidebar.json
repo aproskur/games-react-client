@@ -4,7 +4,7 @@
     "css": {
       "display": "grid",
       "gridTemplateColumns": "20% 70% 10%",
-      "gridTemplateRows": "15% 77% 8%",
+      "gridTemplateRows": "17% 75% 8%",
       "background": "url('./arctic-background.png') no-repeat",
       "backgroundSize": "cover"
     },
@@ -17,9 +17,10 @@
           "gap": "1em",
           "gridColumn": "2",
           "gridRow": "2",
-          "backgroundColor": "rgba(21, 58, 95, 0.8)",
+          "backgroundColor": "rgba(34, 46, 80, 0.5)",
           "padding": "10px",
-          "overflow": "auto"
+          "overflow": "auto",
+          "paddingTop": "0.5em"
         },
         "children": [
             {
@@ -36,11 +37,10 @@
               "children": [{
                 "component": "div",
                 "css": {
-                  "height": "100%",
-                  "width": "100%",
+                  "height": "95%",
                   "padding": "1em 1em",
                   "background": "url('./images/voting_pinguin.jpg') no-repeat",
-                  "backgroundSize": "contain",
+                  "backgroundSize": "cover",
                   "marginBottom": "1em"
                 }
               },
@@ -48,8 +48,7 @@
                 "component": "div",
                 "text": "Антарктика - это огромный мир из воды, льда и снега, настолько огромный, что никто из его обитателей, кроме, пожалуй, китов, не представляет его размеров. Кроме гигантского материка, полностью покрытого льдом, в антарктике есть множество айсбергов, больших и маленьких, неспешно дрейфующих в океане. На одном из таких айсбергов и разворачиваются события, в которых вам предстоит принять участие.",
                 "css": {
-                  "width": "100%",
-                  "height": "100%"
+                  "width": "100%"
                 }
               }
               ]
@@ -64,7 +63,7 @@
         "css": {
         "gridColumn": "2",
         "gridRow": "1",
-        "backgroundColor": "rgba(21, 58, 95, 0.8)"
+        "backgroundColor": "rgba(34, 46, 80, 0.5)"
         }
       },
       {
@@ -73,15 +72,15 @@
         "css" : {
           "gridColumn": "1 / 3",
           "gridRow": "1",
-          "alignItems": "start",
           "display": "flex",
-          "width": "90%",
+          "width": "85%",
           "justifyContent": "space-between",
           "listStyleType": "none",
           "color": "#fff",
           "fontSize": "2rem",
           "fontWeight": "bold",
-          "marginLeft": "100px"
+          "marginLeft": "4.5em",
+          "marginTop": "1em"
         },
         "children": [
           {
@@ -136,7 +135,7 @@
                   "alignItems": "center",
                   "background": "url('./top-sidebar/znaniya.png') no-repeat",
                   "backgroundSize": "cover",
-                  "color": "rgba(21, 58, 95)",
+                  "color": "rgb(28, 95, 145)",
                   "fontSize": "2rem",
                   "textAlign": "center"
                 }
@@ -171,7 +170,7 @@
                   "alignItems": "center",
                   "background": "url('./top-sidebar/doverie.png') no-repeat",
                   "backgroundSize": "cover",
-                  "color": "rgba(21, 58, 95)",
+                  "color": "rgb(28, 95, 145)",
                   "fontSize": "2rem",
                   "textAlign": "center"
                 }
@@ -206,7 +205,7 @@
                   "alignItems": "center",
                   "background": "url('./top-sidebar/energia.png') no-repeat",
                   "backgroundSize": "cover",
-                  "color": "rgba(21, 58, 95)",
+                  "color": "rgb(28, 95, 145)",
                   "fontSize": "2rem",
                   "textAlign": "center"
                 }
@@ -241,7 +240,7 @@
                   "alignItems": "center",
                   "background": "url('./top-sidebar/kontrol.png') no-repeat",
                   "backgroundSize": "cover",
-                  "color": "rgba(21, 58, 95)",
+                  "color": "rgb(28, 95, 145)",
                   "fontSize": "2rem",
                   "textAlign": "center"
                 }
@@ -279,7 +278,7 @@
                   "alignItems": "center",
                   "background": "url('./top-sidebar/status.png') no-repeat",
                   "backgroundSize": "cover",
-                  "color": "rgba(21, 58, 95)",
+                  "color": "rgb(28, 95, 145)",
                   "fontSize": "2rem",
                   "textAlign": "center"
                 }
@@ -314,7 +313,7 @@
                   "alignItems": "center",
                   "background": "url('./top-sidebar/kontakt.png') no-repeat",
                   "backgroundSize": "cover",
-                  "color": "rgba(21, 58, 95)",
+                  "color": "rgb(28, 95, 145)",
                   "textAlign": "center"
                 }
               },
@@ -348,7 +347,7 @@
                   "alignItems": "center",
                   "background": "url('./top-sidebar/konstruktiv.png') no-repeat",
                   "backgroundSize": "cover",
-                  "color": "rgba(21, 58, 95)",
+                  "color": "rgb(28, 95, 145)",
                   "fontSize": "2rem",
                   "textAlign": "center"
                 }
@@ -383,7 +382,7 @@
                   "alignItems": "center",
                   "background": "url('./top-sidebar/gibkost.png') no-repeat",
                   "backgroundSize": "cover",
-                  "color": "rgba(21, 58, 95)",
+                  "color": "rgb(28, 95, 145)",
                   "fontSize": "2rem",
                   "textAlign": "center"
                 }
@@ -413,7 +412,7 @@
           "gap": ".5em",
           "padding": ".5em .5em",
           "alignItems": "center",
-          "backgroundColor":"rgba(21, 58, 95, 0.8)",
+          "backgroundColor":"rgba(34, 46, 80, 0.5)",
           "gridRow": "3",
           "gridColumn": "2 / 2"      
         },
@@ -427,7 +426,7 @@
               "height": "1.5em",
               "width": "8em",
               "textAlign": "center",
-              "color": "rgba(94,166,195, 0.8)",
+              "color": "rgb(95, 166, 197)",
               "fontWeight": "bold",
               "background": "url('./images/gurnal-hodov.png') no-repeat"
             }
@@ -441,7 +440,7 @@
               "height": "1.5em",
               "width": "6em",
               "textAlign": "center",
-              "color": "rgba(94,166,195, 0.8)",
+              "color": "rgb(95, 166, 197)",
               "fontWeight": "bold",
               "background": "url('./images/podskazka.png') no-repeat"
             }

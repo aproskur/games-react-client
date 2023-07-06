@@ -15,13 +15,11 @@ import Footer from './components/Footer';
 import Button from './components/Button';
 import { useState } from 'react';
 import { CallbackContext } from './CallbackContext';
-import { TestScenesContext } from './TestScenesContext';
 
+const scene_hardcoded = scene_3;
 
-const scene_hardcoded = scene_5;
-
-const scene_array = [scene_1, scene_2, scene_3];
-
+//Функция принимает текущую сцену и массив узлов,которые надо заменить. Итерируется по каждому узлу текущей сцены 
+//и сравнивает id, если id совпадают, заменяем узлы (копирование Object.assign() )
 function replaceNode(current, node_to_replace) {
   node_to_replace.forEach(function (arr_item) {
     if (current.id === arr_item.id) {
@@ -39,21 +37,21 @@ function replaceNode(current, node_to_replace) {
 
 function App() {
 
-
+//React State. Чтобы перерисовывать сцену. Scene передаётся в функцию renderComponent
   const [scene, setScene] = useState(scene_hardcoded)
 
-  //функция, которую передаю в карточку с помощью контекста
+  //Callback функция, которую вызываю в дочернем компоненте, в данном случае Card. Card её видит с помощью контекста CallbackContext
   const handleCallback = (childData) => {
     console.log("DATA WAS PASSED TO PARENT COMPONENT WITH CALLBACK")
-    console.log(childData)
-    const scene_copy = structuredClone(scene)
+    console.log(childData) //child Data - данные, переданные от дочернего компонента
+    const scene_copy = structuredClone(scene) //Чтобы не менять оюъект напрямую, создаётся его копия
     replaceNode(scene_copy, childData);
-    setScene(scene_copy);
+    setScene(scene_copy); //заапдейтила стейт
   }
 
 
 
-  //Функция рисует компоненты с помощью рекатовской ф-ции createElement.
+  //Функция рисует реактовские компоненты с помощью реактовской ф-ции createElement.
   function renderComponent(c) {
     console.log("RENDER component C")
     console.log(c);
@@ -112,11 +110,11 @@ function App() {
 
 
   return (
-    <TestScenesContext.Provider>
+
       <CallbackContext.Provider value={handleCallback}>
         {renderComponent(scene)}
       </CallbackContext.Provider>
-    </TestScenesContext.Provider>
+
   );
 }
 

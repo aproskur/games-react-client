@@ -17,7 +17,7 @@
           "gap": "1em",
           "gridColumn": "2",
           "gridRow": "1 / 2",
-          "backgroundColor": "rgba(21, 58, 95, 0.8)",
+          "backgroundColor": "rgba(34, 46, 80, .5)",
           "paddingTop": "1em",
           "paddingLeft": "1em",
           "paddingRight": "1em",
@@ -42,8 +42,9 @@
                 "gridTemplateColumns":" 1fr 1fr",
                 "columnGap": ".5em",
                 "rowGap": ".2em",
-                "backgroundColor": "rgba(21, 58, 95, 0.7)",
-                "padding": ".5em"
+                "backgroundColor": "rgba(33, 75, 122, .5)",
+                "padding": ".5em",
+                "marginBottom": "1em"
             },         
             "children": [
                 {
@@ -52,13 +53,12 @@
                   "text": "Но на айсберге пингвины были как в крепости, большинство хищников не могли до них добраться, кроме того, айсберг служил надежным убежищем от зимних ледяных штормов благодаря своим размерам и наличию",
                   "onclick" : "request",
                   "css": {
-                    "height": "150px",
+                    "maxHeight": "300px",
                     "padding": ".5em 1em",
-                    "backgroundColor": "rgba(18,116,169, 0.4)",
+                    "backgroundColor": "rgba(34,46,80, .5)",
                     "color": "#fff",
                     "fontWeight": "bold",
-                    "fontSize": "1.15rem",
-                    "marginBottom": "0.2em"
+                    "fontSize": "1.15rem"
                   }           
                 },
                 {
@@ -66,10 +66,10 @@
                   "id": "4",
                   "text": "Антарктика - это огромный мир из воды, льда и снега, настолько огромный, что никто из его обитателей, кроме, пожалуй, китов, не представляет егоАнтарктика - это огромный мир из воды, льда и снега, настолько огромный, что никто из его обитателей, кроме, пожалуй, китов, не представляет его",
                   "css": {
-                    "height": "150px",
+                    "maxH1eight": "300px",
                     "padding": ".5em 1em",
-                    "backgroundColor": "rgba(18,116,169, 0.4)",
-                    "color": "#fff",
+                    "backgroundColor": "rgba(254,254,254, .7)",
+                    "color": "rgb(33, 75, 122)",
                     "fontWeight": "bold",
                     "fontSize": "1.15rem",
                     "overflow": "scroll"
@@ -79,8 +79,8 @@
                     "component":"sidebar",
                     "css": {
                         "display": "flex",
+                        "justifyContent": "space-between",
                         "listStyleType": "none",
-                        "justifyContent": "space-evenly",
                         "color": "#fff",
                         "fontSize": "1em",
                         "fontWeight": "600",
@@ -88,6 +88,45 @@
                         "margin": "0px 5px"
                     },
                     "children": [{
+                        "component":"div",
+                        "css": {
+                            "display": "flex",
+                            "flexDirection": "column"
+                        },
+                        "children": [
+                            {
+                                "component":"div",
+                                "css": {
+                                    "display": "flex",
+                                    "flexDirection": "column"
+                                },
+                                "children": [
+                                    {
+                                        "component": "div",
+                                        "css": {
+                                            "display": "flex",
+                                            "justifyContent": "center"
+                                        },
+                                        "children": [
+                                            {
+                                                "component":"score",
+                                                "text": "29",
+                                                "css": {
+                                                 "fontSize": "2.25rem",
+                                                 "fontWeight": "600"
+                                                }                                
+                                            }
+                                        ]                                                      
+                                    },
+                                            {
+                                                "component": "label",
+                                                "text": "осталось дней"
+                                            }                        
+                                ]
+                            }                  
+                        ]
+                    },
+                    {
                         "component":"div",
                         "css": {
                             "display": "flex",
@@ -103,7 +142,7 @@
                                 "children": [
                                     {
                                         "component":"score",
-                                        "text": "-1",
+                                        "text": "1",
                                         "css": {
                                          "fontSize": "2.25rem",
                                          "fontWeight": "600"
@@ -358,7 +397,7 @@
                 "gridTemplateColumns":" 1fr 1fr",
                 "columnGap": ".5em",
                 "rowGap": ".2em",
-                "backgroundColor": "rgba(21, 58, 95, 0.7)",
+                "backgroundColor": "rgba(33, 75, 122, .5)",
                 "padding": ".5em"
             },         
             "children": [
@@ -366,15 +405,13 @@
                   "component": "card",
                   "id": "3",
                   "text": "Антарктика - это огромный мир из воды, льда и снега, настолько огромный, что никто из его обитателей, кроме, пожалуй, китов, не представляет его",
-                  "onclick" : "request",
                   "css": {
                     "height": "150px",
                     "padding": ".5em 1em",
-                    "backgroundColor": "rgba(18,116,169, 0.4)",
+                    "backgroundColor": "rgba(34,46,80, .5)",
                     "color": "#fff",
                     "fontWeight": "bold",
-                    "fontSize": "1.15rem",
-                    "marginBottom": "0.2em"
+                    "fontSize": "1.15rem"
                   }           
                 },
                 {
@@ -382,10 +419,10 @@
                   "id": "4",
                   "text": "Антарктика - это огромный мир из воды, льда и снега, настолько огромный, что никто из его обитателей, кроме, пожалуй, китов, не представляет его. Антарктика - это огромный мир из воды, льда и снега, настолько огромный, что никто из его обитателей, кроме, пожалуй, китов, не представляет его",
                   "css": {
-                    "height": "150px",
+                    "maxHeight": "150px",
                     "padding": ".5em 1em",
-                    "backgroundColor": "rgba(18,116,169, 0.4)",
-                    "color": "#fff",
+                    "backgroundColor": "rgba(254,254,254, .7)",
+                    "color": "rgb(33, 75, 122)",
                     "fontWeight": "bold",
                     "fontSize": "1.15rem",
                     "overflow": "scroll"
@@ -396,14 +433,45 @@
                     "css": {
                         "display": "flex",
                         "listStyleType": "none",
-                        "justifyContent": "space-evenly",
+                        "justifyContent": "space-between",
                         "color": "#fff",
                         "fontSize": "1em",
                         "fontWeight": "600",
                         "gridColumn": "span 2",
                         "margin": "0px 5px"
                     },
-                    "children": [{
+                    "children": [
+                        {
+                            "component":"div",
+                            "css": {
+                                "display": "flex",
+                                "flexDirection": "column"
+                            },
+                            "children": [
+                                {
+                                    "component": "div",
+                                    "css": {
+                                        "display": "flex",
+                                        "justifyContent": "center"
+                                    },
+                                    "children": [
+                                        {
+                                            "component":"score",
+                                            "text": "30",
+                                            "css": {
+                                             "fontSize": "2.25rem",
+                                             "fontWeight": "600"
+                                            }                                
+                                        }
+                                    ]                                                      
+                                },
+                                        {
+                                            "component": "label",
+                                            "text": "осталось дней"
+                                        }                        
+                            ]
+                        },
+                        {
                         "component":"div",
                         "css": {
                             "display": "flex",
@@ -668,7 +736,7 @@
           "justifyContent": "space-between",
           "padding": ".5em .5em",
           "alignItems": "center",
-          "backgroundColor":"rgba(21, 58, 95, 0.8)",
+          "backgroundColor":"rgba(34, 46, 80, 0.5)",
           "gridRow": "2",
           "gridColumn": "2"      
         },
