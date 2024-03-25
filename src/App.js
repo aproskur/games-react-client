@@ -14,12 +14,12 @@ import Card from './components/Card';
 import Footer from './components/Footer';
 import Button from './components/Button';
 import { useState } from 'react';
-import { CallbackContext } from './CallbackContext';
+import { CallbackContext } from './components/CallbackContext';
 
-const scene_hardcoded = scene_3;
+const scene_hardcoded = scene_1;
 
-//Функция принимает текущую сцену и массив узлов,которые надо заменить. Итерируется по каждому узлу текущей сцены 
-//и сравнивает id, если id совпадают, заменяем узлы (копирование Object.assign() )
+//The function takes the current scene and an array of nodes to replace. It iterates through each node of the current scene
+//and compares the id; if the ids match, we replace the nodes (copying with Object.assign())
 function replaceNode(current, node_to_replace) {
   node_to_replace.forEach(function (arr_item) {
     if (current.id === arr_item.id) {
@@ -33,30 +33,25 @@ function replaceNode(current, node_to_replace) {
   });
 }
 
-
-
 function App() {
 
-//React State. Чтобы перерисовывать сцену. Scene передаётся в функцию renderComponent
+  //React State to re-render the scene. Scene is passed to renderComponent function
   const [scene, setScene] = useState(scene_hardcoded)
 
-  //Callback функция, которую вызываю в дочернем компоненте, в данном случае Card. Card её видит с помощью контекста CallbackContext
+  //Callback function called in a child component, in this case Card. Card sees it through the CallbackContext
   const handleCallback = (childData) => {
     console.log("DATA WAS PASSED TO PARENT COMPONENT WITH CALLBACK")
-    console.log(childData) //child Data - данные, переданные от дочернего компонента
-    const scene_copy = structuredClone(scene) //Чтобы не менять оюъект напрямую, создаётся его копия
+    console.log(childData) //child Data - data passed from the child component
+    const scene_copy = structuredClone(scene) //To avoid directly modifying the object, its copy is created
     replaceNode(scene_copy, childData);
-    setScene(scene_copy); //заапдейтила стейт
+    setScene(scene_copy); //updated the state
   }
 
-
-
-  //Функция рисует реактовские компоненты с помощью реактовской ф-ции createElement.
+  //Function draws React components using React's createElement function.
   function renderComponent(c) {
     console.log("RENDER component C")
     console.log(c);
     const child_comps_arr = c.children || [];
-    //const child_comps_arr = Object.values(child_comps);
     const ch = child_comps_arr.map(x => renderComponent(x));
     console.log("RENDER" + c.component)
     console.log(ch)
@@ -108,12 +103,11 @@ function App() {
     }
   }
 
-
   return (
 
-      <CallbackContext.Provider value={handleCallback}>
-        {renderComponent(scene)}
-      </CallbackContext.Provider>
+    <CallbackContext.Provider value={handleCallback}>
+      {renderComponent(scene_1)}
+    </CallbackContext.Provider>
 
   );
 }

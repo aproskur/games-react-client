@@ -1,11 +1,14 @@
-import React, { memo } from 'react'
+'use client'
+import React from 'react'
 
 
-const CardsContainer = function CardsContainer({children, ...props}) {
+const GameCardsContainer = function GameCardsContainer({children, ...props}) {
   return (
     <div className="cards-container" style = { props.style }>{children}</div>
   )
 };
 
 
-export default CardsContainer
+export default GameCardsContainer
+
+//copied from pinguins. TODO Revise

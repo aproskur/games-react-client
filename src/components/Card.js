@@ -1,36 +1,34 @@
-import React, { useContext } from 'react'
-import { memo } from 'react'
+import React, { useContext } from 'react';
+import { memo } from 'react';
 import { api_requestSomething } from '../api.js';
-import { CallbackContext } from '../CallbackContext'
+import { CallbackContext } from './CallbackContext';
 
-
-
-const Card =  memo(function Card({children, ...props}){
-
+const Card = memo(function Card({ children, ...props }) {
     const passData = useContext(CallbackContext);
 
-// wrapper функция-обертка: делает вид, что запрашивает что-то у сервера, получает это что-то  с помощью api_requestSomething, потом передает массив объектов наверх в App
-//passData - callback, передать данные (какие объекты надо перерисовать) в App
-//api_requestSomething - возвращает захардкоженный массив компонентов, которые надо перересовать. 
+    // Wrapper function: pretends to request something from the server, receives it via api_requestSomething, then passes an array of objects up to App
+    // passData - callback, to pass data (which objects need to be re-rendered) to App
+    // api_requestSomething - returns a hardcoded array of components that need to be re-rendered.
     function f1() {
         const data = api_requestSomething();
         passData(data);
-      }
-    
+    }
 
     const func = props.onclick;
-    function getFunction(func){
-        if (func === 'request'){
-            return f1  
+    // Determines which function to return based on the provided func argument
+    function getFunction(func) {
+        if (func === 'request') {
+            return f1;
+        }
     }
-}
 
     return (
-        <div style = {props.style} key = {props.id} onClick = {getFunction(func)} >
+        <div key={props.id} style={props.style} onClick={getFunction(func)}>
             {props.text}
             {children}
         </div>
-    )
+    );
 });
 
-export default Card
+export default Card;
+
